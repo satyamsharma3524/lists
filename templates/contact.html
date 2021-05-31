@@ -1,0 +1,87 @@
+<!-- including basic file  -->
+{% extends 'basic.html' %}
+
+<!-- Create your title  -->
+{% block title %} Contact Us - Personal ToDo List {% endblock title %}
+
+<!-- add your css  -->
+{% block css %}
+  <style>
+    body{
+      background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+
+    }
+
+    .glass-texture{
+    background: rgba(255,255,255,0.4);
+    border-radius: 10px;
+    top: 100px;
+    left: 380px;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    border: 1px solid snow;
+    box-shadow: 10px 5px 5px rgba(22, 22, 22, 0.308);
+    }
+
+    .form-element{
+    display: flex;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.8);
+    }
+
+    .form-element:hover{
+        border: 2px solid rgba(255,255,255,0.8);
+        transition: 0.1s ease-in;
+    }
+
+    .head-text{
+    font-size: 45px;
+    color: snow;
+    font-weight: 1200;
+    text-shadow: linear-gradient(15deg rgba(255, 255, 255, 0)) ;
+    }
+
+    .head-text:hover{
+        font-size: 48px;
+        transition: 0.4s ease-in;
+    }
+
+  </style>
+{% endblock css %}
+
+<!-- body stsrts here  -->
+{% block body %}
+
+{% if success %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong> Success! -- </strong> Your Question is Submitted to Us...
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{% endif %}
+
+<div class="container glass-texture my-4 py-3 px-5">
+  <div class="row text-center">
+      <h1 class="head-text">Contact Us</h1>
+  </div>
+  <div class="row py-4">
+      <form action="#" method="POST"> {% csrf_token %}
+            <div class="mb-3">
+              <input type="text" class="form-control form-element" name="name" id="exampleFormControlInput1" placeholder="Enter Your Name">
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control form-element" name="email" id="exampleFormControlInput1" placeholder="Enter Your Email">
+            </div>
+            <div class="mb-3">
+              <input type="tel" class="form-control form-element" name="contact" id="exampleFormControlInput1" placeholder="Enter Your Phone Number">
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control form-element" name="desc" id="exampleFormControlTextarea1" rows="5" placeholder="How We can help you..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+  </div>
+</div>
+{% endblock body %}
