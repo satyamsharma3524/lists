@@ -62,17 +62,11 @@
                                 href="/contact">Contact Us</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input
-                            class="form-control me-2"
-                            type="search"
-                            placeholder="Search"
-                            aria-label="Search"
-                            />
-                        <button class="btn btn-outline-success" type="submit">
-                            Search
-                        </button>
-                    </form>
+                    
+                    <div class="text-end">
+                        <a href="/login/"><button type="button" class="btn btn-outline-secondary mx-2">Login</button></a>
+                        <a href="/signup"><button type="button" class="btn btn-outline-light">Sign-up</button></a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -80,7 +74,11 @@
         {% block body %}{% endblock body %}
 
 
-        
+        <!-- FOOTER -->
+        <footer class="container-fluid text-light bg-dark my-0 bottom-0" style="height: 60px; padding-top: 20px; background: linear-gradient(20deg, rgba(126,126,126,1) 0%, rgba(22,22,22,1) 98%); ">
+            <p class="float-end"><a href="#"><strong style="color: snow; ">Back to top</strong></a></p>
+            <p>&copy; 2020–2024 Notes Company, Inc. &middot; Created By - <a href="https://satyamsharma3524.github.io/Satyam_Portfolio/"><strong style="color: snow; ">Satyam Sharma</strong></a> &middot;</p>
+        </footer>
 
         <!-- Optional JavaScript; choose one of the two! -->
 

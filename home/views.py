@@ -1,6 +1,7 @@
 from home.models import Tasks,Contacts
 from django.shortcuts import render
 from datetime import datetime
+from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 
@@ -36,3 +37,11 @@ def viewtask(request):
     allTasks = Tasks.objects.all()
     context = {'Tasks':allTasks}
     return render(request,'viewtask.html',context)
+
+
+def login(request):
+    return render(request,'login.html')
+
+
+def signup(request):
+    return render(request,'signup.html')

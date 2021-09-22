@@ -1,0 +1,94 @@
+<!-- including basic file  -->
+{% extends 'basic.html' %}
+
+<!-- Create your title  -->
+{% block title %} Login - Personal ToDo List {% endblock title %}
+
+<!-- add your css  -->
+{% block css %}
+<style>
+     body{
+        background: rgb(126,126,126);
+        background: linear-gradient(20deg, rgba(126,126,126,1) 0%, rgba(22,22,22,1) 50%); 
+    }
+
+    .glass-texture{
+    background: rgba(255,255,255,0.4);
+    border-radius: 10px;
+    top: 100px;
+    left: 380px;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    border: 1px solid snow;
+    box-shadow: 10px 5px 5px rgba(22, 22, 22, 0.308);
+    }
+
+    .form-element{
+    display: flex;
+    border-radius: 15px;
+    padding: 12px 15px;   
+    border: 1px solid rgba(255,255,255,0.8);
+    }
+
+    .form-element:hover{
+        border: 2px solid rgba(255,255,255,0.8);
+        transition: 0.1s ease-in;
+    }
+
+    .head-text{
+    font-size: 50px;
+    color: snow;
+    font-weight: 1200;
+    text-shadow: linear-gradient(15deg rgba(255, 255, 255, 0)) ;
+    }
+
+    .head-text:hover{
+        font-size: 53px;
+        transition: 0.4s ease-in;
+    }
+
+ </style>
+{% endblock css %}
+
+<!-- body stsrts here  -->
+{% block body %}
+
+
+{% if success %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong> Success! -- </strong> Your Task is added to the list...
+    <button type="button" class="btn-close" data-bs-dismiss="alert"
+        aria-label="Close"></button>
+</div>
+{% endif %}
+
+
+
+<div class="container glass-texture my-4 px-5">
+    <div class="row my-4 text-center">
+        <h1 class="head-text">Login</h1>
+    </div>
+    <div class="row">
+        <form action="" method="POST"> {% csrf_token %}
+            <div class="mb-3 py-2">
+                <input type="text" class="form-control form-element"
+                    name="username" id="exampleFormControlInput1"
+                    placeholder="User Name">
+            </div>
+            <div class="mb-3 py-2">
+                <input type="password" class="form-control form-element"
+                    name="password" id="exampleFormControlInput2"
+                    placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-success px-4 py-2">Login</button>
+        </form>
+    </div>
+    <div class="row my-4">
+        <span class="text-light">Not a User <a class="text-warning"
+                href="/signup">Create Account</a></span>
+    </div>
+</div>
+{% endblock body %}

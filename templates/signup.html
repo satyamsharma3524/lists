@@ -2,7 +2,7 @@
 {% extends 'basic.html' %}
 
 <!-- Create your title  -->
-{% block title %} Tasks - Personal ToDo List {% endblock title %}
+{% block title %} Login - Personal ToDo List {% endblock title %}
 
 <!-- add your css  -->
 {% block css %}
@@ -29,7 +29,7 @@
     .form-element{
     display: flex;
     border-radius: 15px;
-    padding: 12px 15px;   
+    padding: 9px 12px;   
     border: 1px solid rgba(255,255,255,0.8);
     }
 
@@ -39,14 +39,14 @@
     }
 
     .head-text{
-    font-size: 50px;
+    font-size: 45px;
     color: snow;
     font-weight: 1200;
     text-shadow: linear-gradient(15deg rgba(255, 255, 255, 0)) ;
     }
 
     .head-text:hover{
-        font-size: 53px;
+        font-size: 48px;
         transition: 0.4s ease-in;
     }
 
@@ -67,19 +67,31 @@
     
 
     <div class="container glass-texture my-4 px-5">
-        <div class="row my-4 text-center">
-            <h1 class="head-text">Create Task</h1>
+        <div class="row my-2 text-center">
+            <h1 class="head-text">Create Account</h1>
         </div>
         <div class="row">
-            <form action="#" method="POST"> {% csrf_token %}
-                <div class="mb-3 py-2">
-                    <input type="text" class="form-control form-element" name="taskname" id="exampleFormControlInput1" placeholder="Enter Your Task Name">
+            <form action="" method="POST"> {% csrf_token %}
+                <div class="mb-1 py-2">
+                    <input type="text" class="form-control form-element" name="username" id="exampleFormControlInput1" placeholder="Create UserName">
                   </div>
-                  <div class="mb-3 py-2">
-                    <textarea class="form-control form-element" name="taskdesc" id="exampleFormControlTextarea1" rows="5" placeholder="Enter Your Task Description"></textarea>
+                  <div class="mb-1 py-2">
+                    <input type="text" class="form-control form-element" name="name" id="exampleFormControlInput1" placeholder="Enter your Name">
                   </div>
-                  <button type="submit" class="btn btn-success">Create Task</button>
+                  <div class="mb-1 py-2">
+                    <input type="email" class="form-control form-element" name="email" id="exampleFormControlInput1" placeholder="Enter Your Email">
+                  </div>
+                  <div class="mb-1 py-2">
+                    <input type="password" class="form-control form-element" name="password" id="exampleFormControlInput2" placeholder="Create Password">
+                  </div>
+                  <div class="mb-1 py-2">
+                    <input type="password" class="form-control form-element" name="password" id="exampleFormControlInput2" placeholder="Verify Password">
+                  </div>
+                  <button type="submit" class="btn btn-success px-4 py-2">Login</button>
             </form>
+        </div>
+        <div class="row my-2">
+            <span class="text-light">Already a User <a class="text-warning" href="/login">Login</a></span>
         </div>
     </div>
 {% endblock body %}

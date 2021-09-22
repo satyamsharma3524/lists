@@ -7,14 +7,17 @@
 <!-- add your css  -->
 {% block css %}
   <style>
-
+    body{
+    background: rgb(126,126,126);
+    background: linear-gradient(20deg, rgba(126,126,126,1) 0%, rgba(22,22,22,1) 50%); 
+    }
   </style>
 {% endblock css %}
 
 <!-- body stsrts here  -->
 {% block body %}
 
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -61,11 +64,11 @@
   
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">Create Your Own List of Tasks... <span class="text-muted">It’ll blow your mind.</span></h2>
-          <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+          <h2 class="featurette-heading text-light">Create Your Own List of Tasks... <span class="text-muted">It’ll blow your mind.</span></h2>
+          <p class="lead text-light">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
         </div>
         <div class="col-md-5">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="https://source.unsplash.com/500x500/?work" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+          <img class="bd-placeholder-img bd-placeholder-img-lg shadow-lg featurette-image img-fluid mx-auto" width="500" height="500" src="https://source.unsplash.com/500x500/?work" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
   
         </div>
       </div>
@@ -74,11 +77,11 @@
   
       <div class="row featurette">
         <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">Manage Your Work properly and stay Concentrated...<span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+          <h2 class="featurette-heading text-light">Manage Your Work properly and stay Concentrated...<span class="text-muted">See for yourself.</span></h2>
+          <p class="lead text-light">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
         </div>
         <div class="col-md-5 order-md-1">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="https://source.unsplash.com/500x500/?adventure" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+          <img class="bd-placeholder-img bd-placeholder-img-lg shadow-lg featurette-image img-fluid mx-auto" width="500" height="500" src="https://source.unsplash.com/500x500/?adventure" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
   
         </div>
       </div>
@@ -87,11 +90,11 @@
   
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">Keep Your List and Work prepared...<span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+          <h2 class="featurette-heading text-light">Keep Your List and Work prepared...<span class="text-muted">Checkmate.</span></h2>
+          <p class="lead text-light">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
         </div>
         <div class="col-md-5">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="https://source.unsplash.com/500x500/?travel" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+          <img class="bd-placeholder-img bd-placeholder-img-lg shadow-lg featurette-image img-fluid mx-auto" width="500" height="500" src="https://source.unsplash.com/500x500/?travel" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
   
         </div>
       </div>
@@ -102,12 +105,6 @@
       <!-- /END THE FEATURETTES -->
   
   
-  
-    <!-- FOOTER -->
-    <footer class="container">
-      <p class="float-end"><a href="#">Back to top</a></p>
-      <p>&copy; 2020–2024 Company, Inc. &middot; Created By - <a href="https://satyamsharma3524.github.io/Satyam_Portfolio/"><strong>Satyam Sharma</strong></a> &middot;</p>
-    </footer>
 
     
 {% endblock body %}
